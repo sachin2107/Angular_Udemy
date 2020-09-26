@@ -5,21 +5,21 @@
     <br/>
   </div>
   <div>
-    <label for="enteredText">Enter text</label>
-    <input type="text" id="enteredText" />
+    <label>Enter text</label>
+    <input (input)="onChangeLength($event.target.value)" />
   </div>
 
   <div>
-    <label>Use letters</label>
-    <input type="checkbox"/>
+    <label>Use letters</label> 
+    <input (change)="onChangeUseLetters()" type="checkbox"/>
   </div>
   <div>
     <label>Use numbers</label>
-    <input type="checkbox"/>
+    <input (change)="onChangeUseNumbers()" type="checkbox"/>
   </div>
   <div>
     <label>Use symbols</label>
-    <input type="checkbox"/>
+    <input (change)="onChangeUseSymbols()" type="checkbox"/>
   </div>
 
   <div>
@@ -28,6 +28,7 @@
 
   <div>
     <label>Your password</label>
-    <input />
+    <input [value]="password"/>
   </div>
+  {{ getName() }}
 </div>
