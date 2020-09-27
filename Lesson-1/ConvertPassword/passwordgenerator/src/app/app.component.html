@@ -60,7 +60,7 @@
           (click)="onButtonClick()">Generate!</button>
       </div>
 
-      <div>
+      <div *ngIf="password">
         <label>Your password</label>
         <input [value]="password" />
       </div>
